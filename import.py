@@ -16,7 +16,7 @@ from urllib.request import urlopen
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("data").resolve()
 
-map_df = pd.read_csv(DATA_PATH.joinpath("map_df3.csv"),sep=',',error_bad_lines=False)
+map_df = pd.read_csv(DATA_PATH.joinpath("map_df0708.csv"),sep=',',error_bad_lines=False)
 
 # mapbox token
 mapbox_accesstoken = 'pk.eyJ1IjoiZC12ZiIsImEiOiJjazZuNTM4NnkwcjE0M3RsaTFtYTFoeWJnIn0.LWr2mmAYaNCG2CBk_PcD9Q'
@@ -43,9 +43,9 @@ pl_deep=[[0.0, 'rgb(253, 253, 204)'],
          [0.9, 'rgb(55, 44, 80)'],
          [1.0, 'rgb(39, 26, 44)']]
 
-Types = ['day 1','day 2','day 3','day 4','day 5','day 6','IV'] 
+Types = ['day 1','day 2','day 3','day 4','day 5','day 6','day 7'] 
 
-TypesI = ['Discomfort day 1','Discomfort day 2','Discomfort day 3','Discomfort day 4','Discomfort day 5','Discomfort day 6'] 
+TypesI = ['Discomfort day 1','Discomfort day 2','Discomfort day 3','Discomfort day 4','Discomfort day 5','Discomfort day 6', 'Discomfort day 7'] 
 
 trace1 = []    
 
@@ -141,37 +141,37 @@ layout.update(updatemenus=list([
          buttons=list([
              dict(
                  args=['visible', [True, False, False, False, False, False, False]],
-                 label='2020-06-24',
+                 label='2020-07-08',
                  method='restyle'
                  ),
              dict(
                  args=['visible', [False, True, False, False,False, False, False]],
-                 label='2020-06-25',
+                 label='2020-07-09',
                  method='restyle'
                  ),
              dict(
                  args=['visible', [False, False, True, False,False, False, False]],
-                 label='2020-06-26',
+                 label='2020-07-10',
                  method='restyle'
                  ),
              dict(
                  args=['visible', [False, False, False, True,False, False, False]],
-                 label='2020-06-27',
+                 label='2020-07-11',
                  method='restyle'
                 ),
              dict(
                  args=['visible', [False, False, False, False,True, False, False]],
-                 label='2020-06-28',
+                 label='2020-07-12',
                  method='restyle'
                 ),
              dict(
                  args=['visible', [False, False, False, False, False, True,False]],
-                 label='2020-06-29',
+                 label='2020-07-13',
                  method='restyle'
                  ),
             dict(
                  args=['visible', [False, False, False, False, False, False, True]],
-                 label='IV',
+                 label='2020-07-14',
                  method='restyle'
                  )
             ]),
@@ -197,7 +197,7 @@ app.layout = html.Div(children=[
     ),
 
     html.Div(children='''
-        IN+/IST | June 2020
+        IN+/IST | July 2020
     ''')
 ])
 
