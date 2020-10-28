@@ -80,5 +80,16 @@ def update_output(value):
     fig.update_layout(title=f"<b>{value}</b>", title_x=0.5, width=1000, height=600)
     return fig    
 
+fig.layout.images = [dict(
+        source="https://raw.githubusercontent.com/d-vf/reliable-demo-2020/data/logos_reliable.png",
+        xref="paper", yref="paper",
+        x=0.5, y=-0.35,
+        sizex=0.3, sizey=0.3,
+        xanchor="center", yanchor="top"
+      )]
+
+py.iplot(fig, fileopt='overwrite', filename='data/logos_reliable.png')
+
+
 if __name__ == '__main__':
     app.run_server(debug=True)
