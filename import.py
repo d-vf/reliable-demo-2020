@@ -14,6 +14,7 @@ import dash
 import dash_core_components as dcc
 import dash_html_components as html
 
+import plotly.plotly as py
 
 # get relative data folder
 PATH = pathlib.Path(__file__).parent
@@ -23,7 +24,7 @@ map_df = pd.read_csv(DATA_PATH.joinpath("map_df0717.csv"),sep=',',error_bad_line
 # mapbox token
 mapbox_accesstoken = 'pk.eyJ1IjoiZC12ZiIsImEiOiJjazZuNTM4NnkwcjE0M3RsaTFtYTFoeWJnIn0.LWr2mmAYaNCG2CBk_PcD9Q'
 
-with urlopen('https://raw.githubusercontent.com/d-vf/dash/master/data/map_df.json') as response:
+with urlopen('https://raw.githubusercontent.com/d-vf/reliable-demo-2020/master/data/logos_reliable.png') as response:
     counties = json.load(response)
 
 #latitude and longitude values
